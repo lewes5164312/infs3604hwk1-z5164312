@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC107"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button12hr"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:onClick="click12"
+        android:text="12 HOUR TIME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button24hr"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:onClick="click24"
+        android:text="24 HOUR TIME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:background="#FF9800"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="248dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/sydneylayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+            <include
+                layout="@layout/nylayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/parislayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <include
+                layout="@layout/tokyolayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/sflayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
